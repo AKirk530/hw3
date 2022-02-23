@@ -4,11 +4,11 @@
 <ul>
     <% for post in @place.posts %>
         <li>
-            <%= post.title %>, <%= post.description %>, <% = post.date %>
+        <%= post.title %>, <%= post.description%>, <%= post.posted_on%>   
         </li>
         <% end %>
 </ul>
 
-<a href="/places">Return To All Places</a>
+<a href="/posts/new?place_id=<%=@place.id%>">Create Post</a>
 
-<a href="/posts/new?place_id=<% @place.id%>">Create A New Post</a>
+<a href="/places">Return To All Places</a>
