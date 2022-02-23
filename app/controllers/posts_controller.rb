@@ -3,7 +3,17 @@ class PostsController < ApplicationController
         @posts = Post.all
     end
 
+    def show
+        @post = Contact.find(params["place_id"])
+    end
+
     def new
         @post = Post.new
+    end
+
+    def create
+        @post = Post.new(params["post"])
+        @post.save
+        redirect_to "/posts"
     end
 end
