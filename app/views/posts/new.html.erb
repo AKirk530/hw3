@@ -10,10 +10,12 @@
          <%= form.text_field "description" %>
      </p>
      <p>
-         <%= form.label "date","Date"%>
-         <%= form.date_field "Date" %>
+         <%= form.label "posted_on","Posted_On"%>
+         <%= form.date_field "posted_on" %>
      </p>
     <p>
+    <%=form.hidden_field"place_id"%>
+    </p>
          <%= form.submit%>
    </p>
 <% end %>
