@@ -1,2 +1,0 @@
-class TraveljournalController < ApplicationController
-end
