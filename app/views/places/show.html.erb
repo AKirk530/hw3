@@ -1,3 +1,14 @@
 <h1><%= @place.name%></h1>
 
+<h2>Things I did</h2>
+<ul>
+    <% for post in @place.posts %>
+        <li>
+            <%= post.title %>, <%= post.description %>, <% = post.date %>
+        </li>
+        <% end %>
+</ul>
+
 <a href="/places">Return To All Places</a>
+
+<a href="/posts/new?place_id=<% @place.id%>">Create A New Post</a>
